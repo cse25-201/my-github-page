@@ -1,108 +1,152 @@
-/* ===== GLOBAL RESET ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #000;
-    color: white;
-    overflow-x: hidden;
-    opacity: 0;
-    transition: opacity 0.6s ease;
+  background: #0b0b0d;
+  color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  transition: opacity 0.6s ease;
 }
 
-body.loaded {
-    opacity: 1;
-}
+/* NAVBAR */
 
-/* ===== NAVBAR ===== */
 .navbar {
-    backdrop-filter: blur(25px);
-    background: rgba(0,0,0,0.6);
-    transition: 0.4s ease;
+  position: fixed;
+  width: 100%;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11,11,13,0.6);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
 }
 
-.navbar.scrolled {
-    background: rgba(0,0,0,0.9);
+.navbar nav a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
 }
 
-/* ===== HERO SECTION ===== */
+.navbar nav a:hover {
+  color: #fff;
+}
+
+/* HERO */
+
 .hero {
-    height: 100vh;
-    background: linear-gradient(135deg, #000, #0a2540, #0071e3);
-    background-size: 400% 400%;
-    animation: gradientMove 10s ease infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+  height: 100vh;
+  background: url("../assets/hero.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-@keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
 }
 
-/* ===== GLASS BUTTON ===== */
-.glass-btn {
-    padding: 12px 35px;
-    border-radius: 50px;
-    border: 1px solid rgba(255,255,255,0.2);
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(20px);
-    transition: all 0.4s ease;
-    color: white;
-    text-decoration: none;
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
 }
 
-.glass-btn:hover {
-    transform: scale(1.15);
-    background: #0071e3;
-    box-shadow: 0 0 30px #0071e3;
+.hero h1 {
+  font-size: 95px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -2px;
 }
 
-/* ===== CARDS ===== */
-.card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(20px);
-    border-radius: 25px;
-    transition: all 0.5s ease;
-    border: 1px solid rgba(255,255,255,0.1);
+.hero p {
+  margin-top: 25px;
+  color: #bbb;
+  font-size: 18px;
 }
 
-.card:hover {
-    transform: translateY(-20px) scale(1.05);
-    box-shadow: 0 30px 50px rgba(0,0,0,0.8);
+.btn-primary {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 16px 45px;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s ease;
 }
 
-/* ===== SCROLL REVEAL ===== */
+.btn-primary:hover {
+  transform: scale(1.08);
+}
+
+/* LUX SECTION */
+
+.lux-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 140px 10%;
+  background: #111;
+}
+
+.lux-card {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(15px);
+  padding: 50px;
+  border-radius: 20px;
+  max-width: 300px;
+  transition: 0.4s ease;
+}
+
+.lux-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.06);
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* REVEAL */
+
 .reveal {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: 0.8s ease;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
 }
 
 .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ===== PARALLAX SECTION ===== */
-.parallax {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+/* PAGE TRANSITION */
+
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: #0b0b0d;
+  z-index: 2000;
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    padding: 50px;
-    text-align: center;
-    background: #000;
+.page-transition.active {
+  transform: translateY(0);
 }
