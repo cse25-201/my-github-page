@@ -1,88 +1,108 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f6f9;
     color: #333;
+    line-height: 1.6;
 }
 
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 60px;
     background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: #2563eb;
 }
 
 nav a {
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #2563eb;
 }
 
+/* HERO SECTION */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: linear-gradient(to right, #2563eb, #1e40af);
     color: white;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
 .hero button {
-    padding: 12px 25px;
+    margin-top: 25px;
+    padding: 14px 30px;
     border: none;
     background: white;
     color: #2563eb;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: 20px;
+    transition: 0.3s;
 }
 
+.hero button:hover {
+    background: #e2e8f0;
+}
+
+/* TOOLS SECTION */
 .tools {
-    padding: 60px 50px;
+    padding: 70px 60px;
     text-align: center;
+}
+
+.tools h2 {
+    font-size: 30px;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 50px;
     flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    padding: 30px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 35px;
+    width: 270px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
 
 .card img {
@@ -90,12 +110,57 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* PAGE CONTENT (ABOUT + CONTACT) */
 .page-content {
-    padding: 80px 50px;
-    max-width: 700px;
+    padding: 90px 60px;
+    max-width: 800px;
     margin: auto;
 }
 
+.page-content h1 {
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+.page-content h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #2563eb;
+}
+
+.page-content p {
+    margin-bottom: 15px;
+}
+
+/* CONTACT BUTTONS */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.contact-btn {
+    text-decoration: none;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #1e40af;
+    transform: translateY(-3px);
+}
+
+/* FORM (if used later) */
 form {
     display: flex;
     flex-direction: column;
@@ -105,8 +170,9 @@ form {
 
 input, textarea {
     padding: 12px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 14px;
 }
 
 button {
@@ -115,7 +181,7 @@ button {
     background: #2563eb;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
@@ -123,10 +189,37 @@ button:hover {
     background: #1e40af;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     background: white;
-    margin-top: 50px;
+    margin-top: 60px;
     font-size: 14px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.03);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .tools {
+        padding: 50px 20px;
+    }
+
+    .page-content {
+        padding: 60px 20px;
+    }
 }
