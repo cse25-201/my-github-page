@@ -1,136 +1,132 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(135deg, #0e0e11, #1c1c25);
-  color: #f2f2f2;
-  min-height: 100vh;
-  overflow-x: hidden;
+    background-color: #f4f6f9;
+    color: #333;
 }
 
-/* NAVBAR */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  z-index: 1000;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.navbar .logo {
-  font-weight: 600;
-  letter-spacing: 2px;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
 }
 
-.navbar nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #bbb;
-  transition: 0.3s ease;
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
 }
 
-.navbar nav a:hover {
-  color: #fff;
+nav a:hover {
+    color: #2563eb;
 }
-
-/* HERO */
 
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    color: white;
 }
 
 .hero h1 {
-  font-size: 70px;
-  font-weight: 700;
-  background: linear-gradient(to right, #ffffff, #8e9eff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
-.hero p {
-  margin-top: 20px;
-  color: #aaa;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #2563eb;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
-/* BUTTON */
-
-.btn {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 14px 40px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.4s ease;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
+.tools {
+    padding: 60px 50px;
+    text-align: center;
 }
 
-.btn:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-5px);
-}
-
-/* GLASS SECTION */
-
-.section {
-  padding: 120px 10%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .card {
-  width: 300px;
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.4s ease;
+    background: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.08);
+    transform: translateY(-10px);
 }
 
-.card h3 {
-  margin-bottom: 15px;
+.card img {
+    width: 60px;
+    margin-bottom: 15px;
 }
 
-.card p {
-  color: #aaa;
-  font-size: 14px;
+.page-content {
+    padding: 80px 50px;
+    max-width: 700px;
+    margin: auto;
 }
 
-/* FOOTER */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
 
 footer {
-  text-align: center;
-  padding: 40px;
-  color: #777;
-  font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin-top: 50px;
+    font-size: 14px;
 }
