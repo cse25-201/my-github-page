@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ToolNest | Home</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToolNest | Discover Tools</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-    <div class="logo">🔷 ToolNest</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<header class="glass">
+<div class="logo">🔷 ToolNest</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="explore.html">Explore</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<button id="toggle">🌙</button>
 </header>
 
-<section class="hero">
-    <h1>Discover The Best Tech Tools</h1>
-    <p>Your hub for productivity, AI tools, and developer resources.</p>
-    <button>Explore Tools</button>
+
+<section class="hero glass">
+
+<h1>Discover Powerful Digital Tools</h1>
+
+<p>Explore AI, developer and productivity tools in one place.</p>
+
+<a href="explore.html">
+<button class="explore-btn">Explore Tools</button>
+</a>
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="hero-img">
+
 </section>
+
 
 <section class="tools">
-    <h2>Featured Tools</h2>
 
-    <div class="card-container">
+<h2>Popular Categories</h2>
 
-        <div class="card">
-            <img src="https://img.icons8.com/ios-filled/100/artificial-intelligence.png"/>
-            <h3>AI Tools</h3>
-            <p>Discover powerful AI tools for writing, coding, and design.</p>
-        </div>
+<div class="card-container">
 
-        <div class="card">
-            <img src="https://img.icons8.com/ios-filled/100/source-code.png"/>
-            <h3>Developer Tools</h3>
-            <p>Essential resources for programmers and web developers.</p>
-        </div>
+<div class="card glass">
+<img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
+<h3>AI Tools</h3>
+<p>Artificial intelligence tools for creators.</p>
+</div>
 
-        <div class="card">
-            <img src="https://img.icons8.com/ios-filled/100/combo-chart.png"/>
-            <h3>Productivity</h3>
-            <p>Boost your efficiency with smart digital tools.</p>
-        </div>
+<div class="card glass">
+<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+<h3>Developer Tools</h3>
+<p>Tools used for building software and websites.</p>
+</div>
 
-    </div>
+<div class="card glass">
+<img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
+<h3>Productivity</h3>
+<p>Apps that help you stay organized and focused.</p>
+</div>
+
+</div>
+
 </section>
 
-<footer>
-    <p>© 2026 ToolNest | Discover. Compare. Build.</p>
+<footer class="glass">
+<p>© 2026 ToolNest</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
