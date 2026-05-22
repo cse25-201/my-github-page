@@ -1,9 +1,18 @@
+/* =======================
+   RESET
+======================= */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI, sans-serif;
+font-family:'Segoe UI', sans-serif;
 }
+
+
+/* =======================
+   BODY
+======================= */
 
 body{
 color:white;
@@ -13,109 +22,422 @@ animation:gradientMove 12s ease infinite;
 min-height:100vh;
 }
 
+
+/* =======================
+   ANIMATIONS
+======================= */
+
 @keyframes gradientMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+
+0%{
+background-position:0% 50%;
 }
 
-.glass{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-border-radius:12px;
-border:1px solid rgba(255,255,255,0.2);
+50%{
+background-position:100% 50%;
 }
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+/* =======================
+   HEADER
+======================= */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
-margin:20px;
+padding:20px 40px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+position:sticky;
+top:0;
+z-index:100;
 }
 
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+
+/* =======================
+   NAVIGATION
+======================= */
+
 nav a{
-margin:0 15px;
 text-decoration:none;
 color:white;
+margin:0 10px;
+position:relative;
 }
+
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:white;
+transition:0.3s;
+}
+
+
+nav a:hover::after,
+nav a.active::after{
+width:100%;
+}
+
+
+/* =======================
+   DARK MODE BUTTON
+======================= */
+
+#theme-toggle{
+background:none;
+border:none;
+font-size:20px;
+cursor:pointer;
+color:white;
+}
+
+
+/* =======================
+   HERO SECTION
+======================= */
 
 .hero{
 text-align:center;
-padding:120px 20px;
-margin:20px;
+padding:80px 20px;
+animation:fadeIn 1s ease;
 }
 
-.hero-img{
-width:300px;
-margin-top:30px;
-border-radius:10px;
+
+.hero h2{
+font-size:42px;
+margin-bottom:10px;
 }
 
-.explore-btn{
-padding:12px 28px;
-background:#FF2D2B;
+
+.hero p{
+opacity:0.9;
+margin-bottom:20px;
+}
+
+
+/* =======================
+   BUTTON
+======================= */
+
+.cta{
+display:inline-block;
+padding:12px 24px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+transition:0.3s;
+}
+
+
+.cta:hover{
+transform:scale(1.05);
+}
+
+
+/* =======================
+   SEARCH
+======================= */
+
+#search{
+width:60%;
+max-width:400px;
+padding:12px;
 border:none;
-border-radius:8px;
-color:white;
-cursor:pointer;
+border-radius:10px;
+outline:none;
+}
+
+
+/* =======================
+   FILTERS
+======================= */
+
+.filters{
 margin-top:20px;
 }
 
-.tools{
-text-align:center;
-padding:80px;
+
+.filters button{
+padding:8px 15px;
+margin:5px;
+border:none;
+border-radius:10px;
+background:rgba(255,255,255,0.2);
+color:white;
+cursor:pointer;
+transition:0.3s;
 }
 
-.card-container{
+
+.filters button:hover{
+background:rgba(255,255,255,0.4);
+}
+
+
+/* =======================
+   TOOL GRID
+======================= */
+
+.tool-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-margin-top:40px;
+gap:20px;
+padding:40px;
 }
+
+
+/* =======================
+   CARDS
+======================= */
 
 .card{
-padding:30px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+padding:20px;
+border-radius:18px;
 text-align:center;
 transition:0.4s;
+animation:fadeUp 0.8s ease;
 }
 
+
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px #FF2D2B;
+transform:translateY(-10px) scale(1.03);
+background:rgba(255,255,255,0.2);
 }
+
 
 .card img{
 width:60px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-.page-content{
-padding:80px;
-text-align:center;
+
+.card h3{
+margin-bottom:10px;
 }
+
+
+.card p{
+font-size:14px;
+opacity:0.9;
+}
+
+
+/* =======================
+   CARD ACTIONS
+======================= */
+
+.actions{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:15px;
+}
+
+
+.actions button{
+background:none;
+border:none;
+cursor:pointer;
+font-size:18px;
+}
+
+
+/* =======================
+   STARS
+======================= */
+
+.stars{
+cursor:pointer;
+font-size:14px;
+}
+
+
+/* =======================
+   CARD LINKS
+======================= */
+
+.card a{
+display:inline-block;
+margin-top:15px;
+padding:8px 12px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:10px;
+transition:0.3s;
+}
+
+
+.card a:hover{
+transform:scale(1.05);
+}
+
+
+/* =======================
+   FEATURES
+======================= */
+
+.features{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+
+.feature-card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:18px;
+width:250px;
+text-align:center;
+transition:0.3s;
+}
+
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+
+/* =======================
+   CONTENT
+======================= */
+
+.content{
+max-width:800px;
+margin:auto;
+padding:40px;
+line-height:1.8;
+animation:fadeIn 1s ease;
+}
+
+
+/* =======================
+   CONTACT
+======================= */
 
 .contact-links{
-margin-top:30px;
 display:flex;
-flex-direction:column;
-gap:15px;
+justify-content:center;
+gap:20px;
+padding:40px;
+flex-wrap:wrap;
 }
 
-.contact-links a{
-text-decoration:none;
-background:#FF2D2B;
-padding:12px;
-border-radius:6px;
-color:white;
+
+.contact-card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:18px;
+transition:0.3s;
+text-align:center;
+width:220px;
 }
+
+
+.contact-card:hover{
+transform:translateY(-8px);
+}
+
+
+.contact-card a{
+color:white;
+text-decoration:none;
+}
+
+
+/* =======================
+   FOOTER
+======================= */
 
 footer{
 text-align:center;
 padding:20px;
-margin:40px;
+background:rgba(0,0,0,0.2);
+margin-top:40px;
 }
 
-.dark{
+
+/* =======================
+   DARK MODE
+======================= */
+
+.dark-mode{
 background:#111;
+}
+
+
+/* =======================
+   RESPONSIVE
+======================= */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+#search{
+width:90%;
+}
+
 }
