@@ -1,71 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Explore Tools</title>
+<title>ToolNest | Explore</title>
+
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header class="glass">
+<header>
 
-<div class="logo">🔷 ToolNest</div>
+<h1 class="logo">🧠 ToolNest</h1>
 
 <nav>
 <a href="index.html">Home</a>
-<a href="explore.html">Explore</a>
+<a href="explore.html" class="active">Explore</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
 
-<button id="toggle">🌙</button>
+<button id="theme-toggle">🌙</button>
 
 </header>
 
-<section class="page-content">
 
-<h1>Explore Tools</h1>
+<main>
 
-<div class="card-container">
+<!-- Hero -->
+<section class="hero">
 
-<div class="card glass">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968492.png">
-<h3>ChatGPT</h3>
-<p>AI assistant for writing and coding.</p>
-</div>
+<h2>Explore Digital Tools</h2>
 
-<div class="card glass">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png">
-<h3>Notion</h3>
-<p>All-in-one productivity workspace.</p>
-</div>
+<p>
+Discover useful tools for coding, AI, productivity and design
+</p>
 
-<div class="card glass">
-<img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
-<h3>Figma</h3>
-<p>Collaborative design platform.</p>
-</div>
+<input type="text" id="search" placeholder="Search tools...">
 
-<div class="card glass">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968875.png">
-<h3>GitHub</h3>
-<p>Host and manage coding projects.</p>
-</div>
 
-<div class="card glass">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png">
-<h3>Canva</h3>
-<p>Create graphics and presentations.</p>
-</div>
+<section class="filters">
 
-</div>
+<button onclick="filterTools('all')">All</button>
+
+<button onclick="filterTools('ai')">AI</button>
+
+<button onclick="filterTools('dev')">Developer</button>
+
+<button onclick="filterTools('design')">Design</button>
+
+<button onclick="filterTools('productivity')">Productivity</button>
 
 </section>
 
-<footer class="glass">
-<p>© 2026 ToolNest</p>
+</section>
+
+
+<!-- Favorites -->
+<section class="favorites-section">
+
+<h2>⭐ Favorite Tools</h2>
+
+<section class="tool-grid" id="favorites"></section>
+
+</section>
+
+
+<!-- Tools -->
+<section class="tool-grid">
+
+
+<!-- ChatGPT -->
+<article class="card ai">
+
+<img src="https://img.icons8.com/color/96/chatgpt.png" alt="ChatGPT Logo">
+
+<h3>ChatGPT</h3>
+
+<p>
+AI assistant for coding and writing
+</p>
+
+<section class="actions">
+
+<button onclick="addFavorite(this)">
+❤️
+</button>
+
+<section class="stars" onclick="rate(event)">
+⭐ ⭐ ⭐ ⭐ ⭐
+</section>
+
+</section>
+
+<a href="https://chat.openai.com" target="_blank">
+Visit Tool
+</a>
+
+</article>
+
+
+<!-- GitHub -->
+<article class="card dev">
+
+<img src="https://img.icons8.com/color/96/github.png" alt="GitHub Logo">
+
+<h3>GitHub</h3>
+
+<p>
+Platform for storing and managing code
+</p>
+
+<section class="actions">
+
+<button onclick="addFavorite(this)">
+❤️
+</button>
+
+<section class="stars" onclick="rate(event)">
+⭐ ⭐ ⭐ ⭐ ⭐
+</section>
+
+</section>
+
+<a href="https://github.com" target="_blank">
+Visit Tool
+</a>
+
+</article>
+
+
+<!-- Figma -->
+<article class="card design">
+
+<img src="https://img.icons8.com/color/96/figma.png" alt="Figma Logo">
+
+<h3>Figma</h3>
+
+<p>
+Tool for UI and UX design
+</p>
+
+<section class="actions">
+
+<button onclick="addFavorite(this)">
+❤️
+</button>
+
+<section class="stars" onclick="rate(event)">
+⭐ ⭐ ⭐ ⭐ ⭐
+</section>
+
+</section>
+
+<a href="https://figma.com" target="_blank">
+Visit Tool
+</a>
+
+</article>
+
+
+<!-- Notion -->
+<article class="card productivity">
+
+<img src="https://img.icons8.com/color/96/notion.png" alt="Notion Logo">
+
+<h3>Notion</h3>
+
+<p>
+Workspace for notes and productivity
+</p>
+
+<section class="actions">
+
+<button onclick="addFavorite(this)">
+❤️
+</button>
+
+<section class="stars" onclick="rate(event)">
+⭐ ⭐ ⭐ ⭐ ⭐
+</section>
+
+</section>
+
+<a href="https://notion.so" target="_blank">
+Visit Tool
+</a>
+
+</article>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>
+© 2026 ToolNest
+</p>
+
 </footer>
 
 <script src="script.js"></script>
