@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ToolNest | Explore</title>
+<title>ToolNest | About</title>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,8 +17,8 @@
 
 <nav>
 <a href="index.html">Home</a>
-<a href="explore.html" class="active">Explore</a>
-<a href="about.html">About</a>
+<a href="explore.html">Explore</a>
+<a href="about.html" class="active">About</a>
 <a href="contact.html">Contact</a>
 </nav>
 
@@ -29,167 +29,30 @@
 
 <main>
 
-<!-- Hero -->
 <section class="hero">
 
-<h2>Explore Digital Tools</h2>
+<h2>About ToolNest</h2>
 
 <p>
-Discover useful tools for coding, AI, productivity and design
+Learn more about the purpose and goals of the platform
 </p>
 
-<input type="text" id="search" placeholder="Search tools...">
-
-
-<section class="filters">
-
-<button onclick="filterTools('all')">All</button>
-
-<button onclick="filterTools('ai')">AI</button>
-
-<button onclick="filterTools('dev')">Developer</button>
-
-<button onclick="filterTools('design')">Design</button>
-
-<button onclick="filterTools('productivity')">Productivity</button>
-
-</section>
-
 </section>
 
 
-<!-- Favorites -->
-<section class="favorites-section">
-
-<h2>⭐ Favorite Tools</h2>
-
-<section class="tool-grid" id="favorites"></section>
-
-</section>
-
-
-<!-- Tools -->
-<section class="tool-grid">
-
-
-<!-- ChatGPT -->
-<article class="card ai">
-
-<img src="https://img.icons8.com/color/96/chatgpt.png" alt="ChatGPT Logo">
-
-<h3>ChatGPT</h3>
+<section class="content">
 
 <p>
-AI assistant for coding and writing
+ToolNest is a website created to help users discover useful digital tools in one organized platform.
 </p>
-
-<section class="actions">
-
-<button onclick="addFavorite(this)">
-❤️
-</button>
-
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
-
-</section>
-
-<a href="https://chat.openai.com" target="_blank">
-Visit Tool
-</a>
-
-</article>
-
-
-<!-- GitHub -->
-<article class="card dev">
-
-<img src="https://img.icons8.com/color/96/github.png" alt="GitHub Logo">
-
-<h3>GitHub</h3>
 
 <p>
-Platform for storing and managing code
+The website focuses on clean design, accessibility and interactive features that improve user experience.
 </p>
-
-<section class="actions">
-
-<button onclick="addFavorite(this)">
-❤️
-</button>
-
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
-
-</section>
-
-<a href="https://github.com" target="_blank">
-Visit Tool
-</a>
-
-</article>
-
-
-<!-- Figma -->
-<article class="card design">
-
-<img src="https://img.icons8.com/color/96/figma.png" alt="Figma Logo">
-
-<h3>Figma</h3>
 
 <p>
-Tool for UI and UX design
+Future plans include adding personalized recommendations, user accounts and community reviews.
 </p>
-
-<section class="actions">
-
-<button onclick="addFavorite(this)">
-❤️
-</button>
-
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
-
-</section>
-
-<a href="https://figma.com" target="_blank">
-Visit Tool
-</a>
-
-</article>
-
-
-<!-- Notion -->
-<article class="card productivity">
-
-<img src="https://img.icons8.com/color/96/notion.png" alt="Notion Logo">
-
-<h3>Notion</h3>
-
-<p>
-Workspace for notes and productivity
-</p>
-
-<section class="actions">
-
-<button onclick="addFavorite(this)">
-❤️
-</button>
-
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
-
-</section>
-
-<a href="https://notion.so" target="_blank">
-Visit Tool
-</a>
-
-</article>
 
 </section>
 
