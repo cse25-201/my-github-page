@@ -1,45 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ToolNest | Explore</title>
-
-<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-
-<header>
-
-<h1 class="logo">🧠 ToolNest</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="explore.html" class="active">Explore</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<button id="theme-toggle">🌙</button>
-
-</header>
-
-
 <main>
 
-<!-- Hero -->
+<!-- HERO -->
+
 <section class="hero">
 
-<h2>Explore Digital Tools</h2>
+<article class="hero-text">
+
+<h2>
+Explore <span>Digital Tools</span>
+</h2>
 
 <p>
-Discover useful tools for coding, AI, productivity and design
+Discover platforms for coding, AI, design, productivity and collaboration.
 </p>
 
 <input type="text" id="search" placeholder="Search tools...">
-
 
 <section class="filters">
 
@@ -55,45 +30,31 @@ Discover useful tools for coding, AI, productivity and design
 
 </section>
 
-</section>
-
-
-<!-- Favorites -->
-<section class="favorites-section">
-
-<h2>⭐ Favorite Tools</h2>
-
-<section class="tool-grid" id="favorites"></section>
+</article>
 
 </section>
 
 
-<!-- Tools -->
+<!-- FEATURED TOOLS -->
+
+<section class="popular-tools">
+
+<h2 class="section-title">
+Featured Platforms
+</h2>
+
 <section class="tool-grid">
 
 
-<!-- ChatGPT -->
 <article class="card ai">
 
-<img src="https://img.icons8.com/color/96/chatgpt.png" alt="ChatGPT Logo">
+<img src="https://img.icons8.com/color/96/chatgpt.png">
 
 <h3>ChatGPT</h3>
 
 <p>
-AI assistant for coding and writing
+AI assistant for coding, writing and productivity.
 </p>
-
-<section class="actions">
-
-<button onclick="addFavorite(this)">
-❤️
-</button>
-
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
-
-</section>
 
 <a href="https://chat.openai.com" target="_blank">
 Visit Tool
@@ -102,28 +63,32 @@ Visit Tool
 </article>
 
 
-<!-- GitHub -->
+<article class="card ai">
+
+<img src="https://img.icons8.com/color/96/google-gemini.png">
+
+<h3>Gemini</h3>
+
+<p>
+Google AI platform for research and assistance.
+</p>
+
+<a href="https://gemini.google.com" target="_blank">
+Visit Tool
+</a>
+
+</article>
+
+
 <article class="card dev">
 
-<img src="https://img.icons8.com/color/96/github.png" alt="GitHub Logo">
+<img src="https://img.icons8.com/color/96/github.png">
 
 <h3>GitHub</h3>
 
 <p>
-Platform for storing and managing code
+Code hosting and version control platform.
 </p>
-
-<section class="actions">
-
-<button onclick="addFavorite(this)">
-❤️
-</button>
-
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
-
-</section>
 
 <a href="https://github.com" target="_blank">
 Visit Tool
@@ -132,28 +97,15 @@ Visit Tool
 </article>
 
 
-<!-- Figma -->
 <article class="card design">
 
-<img src="https://img.icons8.com/color/96/figma.png" alt="Figma Logo">
+<img src="https://img.icons8.com/color/96/figma.png">
 
 <h3>Figma</h3>
 
 <p>
-Tool for UI and UX design
+Collaborative interface and design platform.
 </p>
-
-<section class="actions">
-
-<button onclick="addFavorite(this)">
-❤️
-</button>
-
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
-
-</section>
 
 <a href="https://figma.com" target="_blank">
 Visit Tool
@@ -161,50 +113,224 @@ Visit Tool
 
 </article>
 
+</section>
 
-<!-- Notion -->
-<article class="card productivity">
+</section>
 
-<img src="https://img.icons8.com/color/96/notion.png" alt="Notion Logo">
 
-<h3>Notion</h3>
+<!-- AI TOOLS -->
+
+<section class="categories-section">
+
+<h2 class="section-title">
+🤖 AI Tools
+</h2>
+
+<section class="tool-grid">
+
+
+<article class="card ai">
+
+<img src="https://img.icons8.com/color/96/artificial-intelligence.png">
+
+<h3>Claude AI</h3>
 
 <p>
-Workspace for notes and productivity
+AI assistant focused on reasoning and writing.
 </p>
 
-<section class="actions">
+</article>
 
-<button onclick="addFavorite(this)">
-❤️
-</button>
 
-<section class="stars" onclick="rate(event)">
-⭐ ⭐ ⭐ ⭐ ⭐
-</section>
+<article class="card ai">
 
-</section>
+<img src="https://img.icons8.com/color/96/midjourney.png">
 
-<a href="https://notion.so" target="_blank">
-Visit Tool
-</a>
+<h3>Midjourney</h3>
+
+<p>
+AI image generation and digital art platform.
+</p>
+
+</article>
+
+
+<article class="card ai">
+
+<img src="https://img.icons8.com/color/96/chatgpt.png">
+
+<h3>Perplexity AI</h3>
+
+<p>
+AI-powered research and search platform.
+</p>
 
 </article>
 
 </section>
 
-</main>
+</section>
 
 
-<footer>
+<!-- DEVELOPER TOOLS -->
+
+<section class="categories-section">
+
+<h2 class="section-title">
+💻 Developer Tools
+</h2>
+
+<section class="tool-grid">
+
+
+<article class="card dev">
+
+<img src="https://img.icons8.com/color/96/visual-studio-code-2019.png">
+
+<h3>VS Code</h3>
 
 <p>
-© 2026 ToolNest
+Modern coding editor for developers.
 </p>
 
-</footer>
+</article>
 
-<script src="script.js"></script>
 
-</body>
-</html>
+<article class="card dev">
+
+<img src="https://img.icons8.com/color/96/replit.png">
+
+<h3>Replit</h3>
+
+<p>
+Online coding and collaboration platform.
+</p>
+
+</article>
+
+
+<article class="card dev">
+
+<img src="https://img.icons8.com/color/96/codepen.png">
+
+<h3>CodePen</h3>
+
+<p>
+Frontend development playground.
+</p>
+
+</article>
+
+</section>
+
+</section>
+
+
+<!-- DESIGN TOOLS -->
+
+<section class="categories-section">
+
+<h2 class="section-title">
+🎨 Design Tools
+</h2>
+
+<section class="tool-grid">
+
+
+<article class="card design">
+
+<img src="https://img.icons8.com/color/96/canva.png">
+
+<h3>Canva</h3>
+
+<p>
+Easy graphic design and presentation platform.
+</p>
+
+</article>
+
+
+<article class="card design">
+
+<img src="https://img.icons8.com/color/96/adobe-photoshop.png">
+
+<h3>Photoshop</h3>
+
+<p>
+Professional image editing software.
+</p>
+
+</article>
+
+
+<article class="card design">
+
+<img src="https://img.icons8.com/color/96/adobe-xd.png">
+
+<h3>Adobe XD</h3>
+
+<p>
+UI and UX design application.
+</p>
+
+</article>
+
+</section>
+
+</section>
+
+
+<!-- PRODUCTIVITY -->
+
+<section class="categories-section">
+
+<h2 class="section-title">
+📚 Productivity Tools
+</h2>
+
+<section class="tool-grid">
+
+
+<article class="card productivity">
+
+<img src="https://img.icons8.com/color/96/notion.png">
+
+<h3>Notion</h3>
+
+<p>
+Workspace for organization and notes.
+</p>
+
+</article>
+
+
+<article class="card productivity">
+
+<img src="https://img.icons8.com/color/96/trello.png">
+
+<h3>Trello</h3>
+
+<p>
+Project and task management platform.
+</p>
+
+</article>
+
+
+<article class="card productivity">
+
+<img src="https://img.icons8.com/color/96/slack-new.png">
+
+<h3>Slack</h3>
+
+<p>
+Communication and collaboration platform.
+</p>
+
+</article>
+
+</section>
+
+</section>
+
+</main>
